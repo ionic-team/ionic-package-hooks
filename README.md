@@ -31,7 +31,7 @@ recommended). If you want a hook to run before another one, reorder the `<hook
 * **function**: Adds the various platform CSS classes to the `<body />` tag of
   your app such as `platform-android`, `platform-ios`, etc.
 
-##### `ios9_allow_http.js`
+##### `ios9_allow_http.sh`
 
 * **type**: `after_prepare`
 * **function**: Sets `NSAllowsArbitraryLoads` to true in your `.plist` file,
