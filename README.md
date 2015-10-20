@@ -23,6 +23,7 @@ recommended). If you want a hook to run before another one, reorder the `<hook
 
 ##### `add_platform_class.js`
 
+* **author**: Ionic
 * **type**: `after_prepare`
 * **function**: Adds the various platform CSS classes to the `<body />` tag of
   your app such as `platform-android`, `platform-ios`, etc.
