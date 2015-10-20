@@ -20,15 +20,23 @@ code in your `config.xml`:
 
 ### Hooks
 
+These are the available hooks. The **type** is what you put in `type` of your
+`<hook />` tag, unless you want to run the hook at a different stage (not
+recommended). If you want a hook to run before another one, reorder the `<hook
+/>` tags.
+
 ##### `add_platform_class.js`
 
-Adds the various platform CSS classes to the `<body />` tag of your app such as
-`platform-android`, `platform-ios`, etc.
+* **type**: `after_prepare`
+* **function**: Adds the various platform CSS classes to the `<body />` tag of
+  your app such as `platform-android`, `platform-ios`, etc.
 
 ##### `ios9_allow_http.js`
 
-Sets `NSAllowsArbitraryLoads` to true in your `.plist` file, allowing all
-regular HTTP connections in your app again for iOS9. Thanks, @daruwanov!
+* **type**: `after_prepare`
+* **function**: Sets `NSAllowsArbitraryLoads` to true in your `.plist` file,
+  allowing all regular HTTP connections in your app again for iOS9. Thanks,
+  @daruwanov!
 
 ### Use these hooks locally
 
