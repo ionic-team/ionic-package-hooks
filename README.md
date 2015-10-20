@@ -14,6 +14,19 @@ To run these hooks in Ionic Package, just put a `<hook />` tag in your
 
 That's it! Package will run that hook on the server.
 
+### Re-enable HTTP for iOS9
+
+This is probably one of the main reasons you're here, so this is how you do
+that:
+
+* Put the following XML in your `config.xml`:
+
+    ```xml
+    <hook type="after_prepare" src="package-hooks/ios9_allow_http.sh" />
+    ```
+* That's it, actually. Run `ionic package build ios ...` again and your binary
+  should allow HTTP.
+
 ### Hooks
 
 These are the available hooks. The **type** is what you put in `type` of your
@@ -25,7 +38,7 @@ recommended). If you want a hook to run before another one, reorder the `<hook
 
 * **author**: Ionic
 * **type**: `after_prepare`
-* **function**: Adds the various platform CSS classes to the `<body />` tag of
+* **function**: Adds the various platform CSS classes to the `<body>` tag of
   your app such as `platform-android`, `platform-ios`, etc.
 
 ##### `ios9_allow_http.sh`
