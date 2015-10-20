@@ -1,4 +1,5 @@
-# ionic-package-hooks
+# Ionic Package Hooks
+
 The hooks in this repository are hooks that you can run during the packaging of
 your app. Ionic Package uses Cordova, so these are just standard [Cordova
 Hooks](http://cordova.apache.org/docs/en/edge/guide/appdev/hooks/index.html)
@@ -17,7 +18,19 @@ code in your `config.xml`:
 <hook type="after_prepare" src="package-hooks/add_platform_class.js" />
 ```
 
-## Local
+### Hooks
+
+#### add_platform_class.js
+
+Adds the various platform CSS classes to the `<body />` tag of your app such as
+`platform-android`, `platform-ios`, etc.
+
+#### ios9_allow_http.js
+
+Sets `NSAllowsArbitraryLoads` to true in your `.plist` file, allowing all
+regular HTTP connections in your app again for iOS9. Thanks, @daruwanov!
+
+### Use these hooks locally
 
 You don't need to download these hooks locally, but if you want to use them for
 local builds, you can clone the repository within your Ionic App, and Cordova
