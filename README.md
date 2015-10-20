@@ -29,10 +29,10 @@ recommended). If you want a hook to run before another one, reorder the `<hook
 
 ##### `ios9_allow_http.sh`
 
+* **author**: [@daruwanov](https://github.com/daruwanov)
 * **type**: `after_prepare`
 * **function**: Sets `NSAllowsArbitraryLoads` to true in your `.plist` file,
-  allowing all regular HTTP connections in your app again for iOS9. Thanks,
-  @daruwanov!
+  allowing all regular HTTP connections in your app again for iOS9.
 
 ### Use these hooks locally
 
