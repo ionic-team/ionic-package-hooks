@@ -20,12 +20,12 @@ code in your `config.xml`:
 
 ### Hooks
 
-#### add_platform_class.js
+##### `add_platform_class.js`
 
 Adds the various platform CSS classes to the `<body />` tag of your app such as
 `platform-android`, `platform-ios`, etc.
 
-#### ios9_allow_http.js
+##### `ios9_allow_http.js`
 
 Sets `NSAllowsArbitraryLoads` to true in your `.plist` file, allowing all
 regular HTTP connections in your app again for iOS9. Thanks, @daruwanov!
