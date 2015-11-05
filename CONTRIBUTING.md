@@ -16,6 +16,6 @@ These are the guidelines for pull requests:
 * Give them a concise, descriptive, and/or recognizable name.
 * Add the hook alphabetically to the
   [**Hooks**](https://github.com/driftyco/ionic-package-hooks/blob/master/README.md#hooks)
-  section of `README.md`, filling out **author**, **type** (which is the
-  *recommended* hook type), and **function** (which briefly outlines what the
-  hook does).
+  section of `README.md`, filling out **author**, **usage** (which is an
+  example of the `<hook />` tag, including the appropriate, recommended hook
+  `type`), and **function** (which briefly outlines what the hook does).

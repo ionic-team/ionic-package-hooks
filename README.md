@@ -37,14 +37,14 @@ recommended). If you want a hook to run before another one, reorder the `<hook
 ##### `add_platform_class.js`
 
 * **author**: Ionic
-* **type**: `after_prepare`
+* **usage**: `<hook type="after_prepare" src="package-hooks/add_platform_class.js" />`
 * **function**: Adds the various platform CSS classes to the `<body>` tag of
   your app such as `platform-android`, `platform-ios`, etc.
 
 ##### `ios9_allow_http.sh`
 
 * **author**: [@daruwanov](https://github.com/daruwanov)
-* **type**: `after_prepare`
+* **usage**: `<hook type="after_prepare" src="package-hooks/ios9_allow_http.sh" />`
 * **function**: Sets `NSAllowsArbitraryLoads` to true in your `.plist` file,
   allowing all regular HTTP connections in your app again for iOS9.
 
