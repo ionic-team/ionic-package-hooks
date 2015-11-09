@@ -47,6 +47,15 @@ recommended). If you want a hook to run before another one, reorder the `<hook
 * **usage**: `<hook type="after_prepare" src="package-hooks/ios9_allow_http.sh" />`
 * **function**: Sets `NSAllowsArbitraryLoads` to true in your `.plist` file,
   allowing all regular HTTP connections in your app again for iOS9.
+  
+##### `ios9_allow_native_fb.sh`
+
+* **author**: [@carson-drake](https://github.com/carson-drake)
+* **usage**: `<hook type="after_prepare" src="package-hooks/ios9_allow_native_fb.sh" />`
+* **function**: Deletes `LSApplicationQueriesSchemes` and then reads the necessary   
+  listings to communicate with Facebook natively to the `.plist` file,
+  allowing login and other features to occur natively rather than in safari.  
+* **credit**: [@mablack](https://github.com/mablack)
 
 ### Use these hooks locally
 
