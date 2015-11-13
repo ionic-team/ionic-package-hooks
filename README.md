@@ -19,13 +19,26 @@ That's it! Package will run that hook on the server.
 This is probably one of the main reasons you're here, so this is how you do
 that:
 
-* Put the following XML in your `config.xml`:
+* Put the following in your `config.xml`:
 
     ```xml
     <hook type="after_prepare" src="package-hooks/ios9_allow_http.sh" />
     ```
 * That's it, actually. Run `ionic package build ios ...` again and your binary
   should allow HTTP.
+
+### Use these hooks locally
+
+You don't need to download these hooks locally, but **local builds won't work
+without them**.
+
+To use them locally, you can clone the repository within your Ionic App, and
+Cordova will pick up your `<hook />` tags within `config.xml` automatically.
+
+**Within your app directory**:
+```bash
+$ git clone https://github.com/driftyco/ionic-package-hooks.git ./package-hooks
+```
 
 ### Hooks
 
@@ -56,14 +69,3 @@ recommended). If you want a hook to run before another one, reorder the `<hook
   listings to communicate with Facebook natively to the `.plist` file,
   allowing login and other features to occur natively rather than in safari.  
 * **credit**: [@mablack](https://github.com/mablack)
-
-### Use these hooks locally
-
-You don't need to download these hooks locally, but if you want to use them for
-local builds, you can clone the repository within your Ionic App, and Cordova
-should pick up your `<hook />` tags within `config.xml` automatically.
-
-**Within your app directory**:
-```bash
-$ git clone https://github.com/driftyco/ionic-package-hooks.git ./package-hooks
-```
