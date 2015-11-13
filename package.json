@@ -1,0 +1,20 @@
+{
+  "name": "ionic-package-hooks",
+  "version": "1.0.0",
+  "description": "Cordova hooks that you can run in Ionic Package",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/driftyco/ionic-package-hooks.git"
+  },
+  "keywords": [
+    "ionic",
+    "package",
+    "cordova"
+  ],
+  "author": "dan@ionic.io",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/driftyco/ionic-package-hooks/issues"
+  },
+  "homepage": "https://github.com/driftyco/ionic-package-hooks#readme"
+}
