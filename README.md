@@ -55,7 +55,14 @@ recommended). If you want a hook to run before another one, reorder the `<hook
 * **function**: Deletes `LSApplicationQueriesSchemes` and then reads the necessary   
   listings to communicate with Facebook natively to the `.plist` file,
   allowing login and other features to occur natively rather than in safari.  
-* **credit**: [@mablack](https://github.com/mablack)
+* **credit**: [@mablack](https://github.com/mablack)  
+  
+##### `android_ignore_translation_errors.js`
+
+* **author**: Ionic
+* **usage**: `<hook type="after_prepare" src="package-hooks/android_ignore_translation_errors.js" />`
+* **function**: After Android prepare, add ` build-extras.gradle` to android platform root to  
+  allow android-lint to ignore the translation errors introduced when including `phonegap-plugin-barcodescanner`.
 
 ### Use these hooks locally
 
