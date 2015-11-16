@@ -59,7 +59,7 @@ recommended). If you want a hook to run before another one, reorder the `<hook
   
 ##### `android_ignore_translation_errors.js`
 
-* **author**: Ionic
+* **author**: [@carson-drake](https://github.com/carson-drake)
 * **usage**: `<hook type="after_prepare" src="package-hooks/android_ignore_translation_errors.js" />`
 * **function**: After Android prepare, add ` build-extras.gradle` to android platform root to  
   allow android-lint to ignore the translation errors introduced when including `phonegap-plugin-barcodescanner`.
