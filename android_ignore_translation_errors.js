@@ -20,7 +20,7 @@ if(rootdir){
 		try{
 			if(platform == 'android'){
 				var lintOptions = 'android { \nlintOptions {\ndisable \'MissingTranslation\' \ndisable \'ExtraTranslation\' \n} \n}';
-				fs.writeFileSync('platforms/android/build-extras.gradle', lintOptions, 'UTF-8');
+				fs.appendFileSync('platforms/android/build-extras.gradle', lintOptions, 'UTF-8');
 				process.stdout.write('Added build-extras.gradle ');
 			}
 		}catch(e){
