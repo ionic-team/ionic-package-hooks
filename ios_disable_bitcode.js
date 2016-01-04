@@ -17,15 +17,15 @@ module.exports = function(ctx) {
 
   var projectName = new common.ConfigParser(util.projectConfig(util.isCordova())).name();
   var projectPath = './platforms/ios/' + projectName + '.xcodeproj/project.pbxproj';
-  var p = xcode.project(projectPath);
+  var project = xcode.project(projectPath);
 
-  p.parse(function(err) {
+  project.parse(function(err) {
     if (err) {
       console.error(err);
       deferral.reject('xcode could not parse project');
     } else{
-      p.updateBuildProperty('ENABLE_BITCODE', 'NO');
-      fs.writeFileSync(projectPath, p.writeSync());
+      project.updateBuildProperty('ENABLE_BITCODE', 'NO');
+      fs.writeFileSync(projectPath, project.writeSync());
       deferral.resolve();
     }
   });
