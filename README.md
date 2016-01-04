@@ -76,3 +76,10 @@ recommended). If you want a hook to run before another one, reorder the `<hook
   listings to communicate with Facebook natively to the `.plist` file,
   allowing login and other features to occur natively rather than in safari.
 * **credit**: [@mablack](https://github.com/mablack)
+
+##### `ios_disable_bitcode.js`
+
+* **author**: [@akofman](https://github.com/akofman)
+* **usage**: `<hook type="after_prepare" src="package-hooks/ios_disable_bitcode.js" />`
+* **function**: Sets `ENABLE_BITCODE` to `NO` to fix iOS builds that stopped
+  working after `phonegap-plugin-push` was updated to 1.5.x.
