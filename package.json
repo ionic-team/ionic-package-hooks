@@ -16,5 +16,10 @@
   "bugs": {
     "url": "https://github.com/driftyco/ionic-package-hooks/issues"
   },
-  "homepage": "https://github.com/driftyco/ionic-package-hooks#readme"
+  "homepage": "https://github.com/driftyco/ionic-package-hooks#readme",
+  "dependencies": {
+    "cordova-common": "^1.0.0",
+    "cordova-lib": "^5.4.1",
+    "xcode": "^0.8.2"
+  }
 }
