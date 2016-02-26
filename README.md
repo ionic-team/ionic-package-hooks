@@ -86,24 +86,11 @@ recommended). If you want a hook to run before another one, reorder the `<hook
 * **function**: Sets `ENABLE_BITCODE` to `NO` to fix iOS builds that stopped
   working after `phonegap-plugin-push` was updated to 1.5.x.
 
-##### `replace_index_per_index.min.js`
-
-* **author**: [@dloprodu](https://github.com/dloprodu)
-* **usage**: `<hook type="after_prepare" src="replace_index_per_index.min.js" />`
-* **function**: In case of you have a index file for production environment (called index.min.html)
-  this script removes 'index.html' and then renames 'index.min.html' to 'index.html'.
-
 ##### `build_minimized.js`
 
 * **author**: [@dloprodu](https://github.com/dloprodu)
 * **usage**: `<hook type="after_prepare" src="build_minimized.js" />`
 * **function**: In a typical angularJS scaffolding builds a app file minimized which contains all
-  controllers, services, filters, etc. Also minimizes all templates, index.html, images and css.
-
-##### `remove_files_not_minimized.js`
-
-* **author**: [@dloprodu](https://github.com/dloprodu)
-* **usage**: `<hook type="after_prepare" src="remove_files_not_minimized.js" />`
-* **function**: In a typical angularJS scaffolding removes unnecessary folders (controllers, directives, ...)
-  except view's folder and scripts minimized in root folder.
-
+  controllers, services, filters, etc. Also minimizes all templates, index.html, images and css. 
+  Finally removes unnecessary folders (controllers, directives, ...) except view's folder and scripts 
+  minimized in root folder.
