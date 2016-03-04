@@ -90,7 +90,7 @@ var viewsFoldersPatt = /^(partials?(\.\w+)*)|(templates?(\.\w+)*)|(views?(\.\w+)
 var cssFoldersPatt   = /^(css(\.\w+)*)|(assets)$/i;
 var imgFoldersPatt   = /^(img)|(images?)|(assets)$/i;
 
-var initJSPatt       = /^app(\.\w+)*\.js$/i; // app.js | app.routes.js | app.config.js | app.modules.js ...
+var initJSPatt       = /^(app(\.\w+)*\.js)|(controllers?(\.\w+)*\.js)|(directives?(\.\w+)*\.js)|(filters?(\.\w+)*\.js)|(factories(\.\w+)*\.js)$/i; // app.js | app.routes.js | app.config.js | app.modules.js ...
 
 var wwwPath;
 
