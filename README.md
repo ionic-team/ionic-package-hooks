@@ -85,3 +85,12 @@ recommended). If you want a hook to run before another one, reorder the `<hook
 * **usage**: `<hook type="after_prepare" src="package-hooks/ios_disable_bitcode.js" />`
 * **function**: Sets `ENABLE_BITCODE` to `NO` to fix iOS builds that stopped
   working after `phonegap-plugin-push` was updated to 1.5.x.
+
+##### `build_minimized.js`
+
+* **author**: [@dloprodu](https://github.com/dloprodu)
+* **usage**: `<hook type="after_prepare" src="build_minimized.js" />`
+* **function**: In a typical angularJS scaffolding builds a app file minimized which contains all
+  controllers, services, filters, etc. Also minimizes all templates, index.html, images and css. 
+  Finally removes unnecessary folders (controllers, directives, ...) except view's folder and scripts 
+  minimized in root folder.
