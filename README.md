@@ -85,3 +85,10 @@ recommended). If you want a hook to run before another one, reorder the `<hook
 * **usage**: `<hook type="after_prepare" src="package-hooks/ios_disable_bitcode.js" />`
 * **function**: Sets `ENABLE_BITCODE` to `NO` to fix iOS builds that stopped
   working after `phonegap-plugin-push` was updated to 1.5.x.
+
+##### `ios_remove_armv7s.js`
+
+* **author**: Ionic
+* **usage**: `<hook type="after_prepare" src="package-hooks/ios_remove_armv7s.js" />`
+* **function**: Remove the `armv7s` architecture from the build process, which
+  causes various build errors, especially with `cordova-plugin-facebook4`.
