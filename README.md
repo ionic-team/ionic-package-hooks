@@ -63,6 +63,12 @@ recommended). If you want a hook to run before another one, reorder the `<hook
 * **function**: After Android prepare, add ` build-extras.gradle` to android platform root to
   allow android-lint to ignore the translation errors introduced when including `phonegap-plugin-barcodescanner`.
 
+##### `copy_android_resources.js`
+
+* **author**: [@schmoofer](https://github.com/schmoofer)
+* **usage**: `<hook type="after_prepare" src="package-hooks/copy_android_resources.js" />`
+* **function**: Copies assets in `resources/android/custom/` to all drawable-* directories in `platforms/android/res`. Example application: Allows for custom icons to be used in Android notifications (action buttons and the notification icon) when using the Push plugin.
+
 ##### `ios9_allow_http.sh`
 
 * **author**: [@daruwanov](https://github.com/daruwanov)
