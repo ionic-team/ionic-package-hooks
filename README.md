@@ -67,7 +67,7 @@ recommended). If you want a hook to run before another one, reorder the `<hook
 
 * **author**: [@schmoofer](https://github.com/schmoofer)
 * **usage**: `<hook type="after_prepare" src="package-hooks/copy_android_resources.js" />`
-* **function**: Copies assets in `resources/android/custom/` to all drawable-* directories in `platforms/android/res`. Example application: Allows for custom icons to be used in Android notifications (action buttons and the notification icon) when using the Push plugin.
+* **function**: Copies assets in `resources/android/custom/` to all drawable-* directories in `platforms/android/res`. Asset filenames must only use a-z, 0-9, and underscores. Example application: Allows for custom icons to be used in Android notifications (action buttons and the notification icon) when using the Push plugin.
 
 ##### `ios9_allow_http.sh`
 

@@ -1,32 +1,55 @@
 #!/usr/bin/env node
+module.exports = copyAndroidResources;
 
 var source = "resources/android/custom/";
-var destinations = ["platforms/android/res/drawable-ldpi/",
-        "platforms/android/res/drawable-mdpi/",
-        "platforms/android/res/drawable-hdpi/",
-        "platforms/android/res/drawable-xhdpi/",
-        "platforms/android/res/drawable-xxhdpi/",
-        "platforms/android/res/drawable-xxxhdpi/"];
+var android_dests = [
+        "res/drawable-ldpi-v4/",
+        "res/drawable-mdpi-v4/",
+        "res/drawable-hdpi-v4/",
+        "res/drawable-xhdpi-v4/",
+        "res/drawable-xxhdpi-v4/",
+        "res/drawable-xxxhdpi-v4/",
+        "res/drawable-ldpi/",
+        "res/drawable-mdpi/",
+        "res/drawable-hdpi/",
+        "res/drawable-xhdpi/",
+        "res/drawable-xxhdpi/",
+        "res/drawable-xxxhdpi/"
+        ];
 
-var fs = require('fs');
-var path = require('path');
 
-var rootdir = process.argv[2];
-
-fs.readdir(path.join(rootdir, source), function(err, files){
-    files.forEach(function(file){
-        destinations.forEach(function(destination){
-            copy(source + file, destination + file);
-        });
-    })
-});
-
-function copy(src, dest){
-    var srcfile = path.join(rootdir, src);
-    var destfile = path.join(rootdir, dest);
-    var destdir = path.dirname(destfile);
-    if (fs.existsSync(srcfile) && fs.existsSync(destdir)) {
-        fs.createReadStream(srcfile).pipe(
-           fs.createWriteStream(destfile));
+function copyAndroidResources(ctx){
+    if(ctx.opts.platforms.indexOf('android') < 0){
+        return;
     }
+    var fs       = ctx.requireCordovaModule('fs'),
+        path     = ctx.requireCordovaModule('path'),
+        Q = ctx.requireCordovaModule('q');
+    
+    var android_rootdir = path.join(ctx.opts.projectRoot, 'platforms/android');
+
+    function copy(src, dest_dir, file){
+        var deferred = Q.defer();
+        if (fs.existsSync(src) && fs.existsSync(dest_dir)) {
+            deferred.resolve(fs.createReadStream(src).pipe(
+               fs.createWriteStream(path.join(dest_dir, file))));
+        }
+        else{
+            deferred.resolve();
+        }
+        return deferred.promise;
+    }
+
+    var promise = Q(-1);
+
+    fs.readdir(path.join(ctx.opts.projectRoot, source), function(err, files){
+        files.forEach(function(file){
+            android_dests.forEach(function(destination){
+                    return copy(path.join(ctx.opts.projectRoot, source + file), path.join(android_rootdir, destination), file);
+                });
+            });
+        })
+    });
+
+    return promise;
 }
