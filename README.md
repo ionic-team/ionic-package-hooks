@@ -92,3 +92,8 @@ recommended). If you want a hook to run before another one, reorder the `<hook
 * **usage**: `<hook type="after_prepare" src="package-hooks/ios_remove_armv7s.js" />`
 * **function**: Remove the `armv7s` architecture from the build process, which
   causes various build errors, especially with `cordova-plugin-facebook4`.
+
+
+### Contributing
+
+See (CONTRIBUTING.md)[https://github.com/driftyco/ionic-package-hooks/blob/master/CONTRIBUTING.md] for details.

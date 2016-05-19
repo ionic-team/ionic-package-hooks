@@ -9,6 +9,8 @@ MIT license.
 These are the guidelines for pull requests:
 
 * Only `.sh` and `.js` are supported.
+* If using Javascript, [follow the module pattern as outlined in the Cordova
+  documentation](https://cordova.apache.org/docs/en/latest/guide/appdev/hooks/#javascript).
 * Put hooks in the root of the repository.
 * *Take off* the numbered prefixes, (e.g. `010_do_something.js` ->
   `do_something.js`). Those are for ordering, and ordering can be done by
