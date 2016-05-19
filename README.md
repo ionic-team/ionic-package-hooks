@@ -96,4 +96,4 @@ recommended). If you want a hook to run before another one, reorder the `<hook
 
 ### Contributing
 
-See (CONTRIBUTING.md)[https://github.com/driftyco/ionic-package-hooks/blob/master/CONTRIBUTING.md] for details.
+See [CONTRIBUTING.md](https://github.com/driftyco/ionic-package-hooks/blob/master/CONTRIBUTING.md) for details.
