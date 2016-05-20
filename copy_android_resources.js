@@ -45,10 +45,9 @@ function copyAndroidResources(ctx){
     fs.readdir(path.join(ctx.opts.projectRoot, source), function(err, files){
         files.forEach(function(file){
             android_dests.forEach(function(destination){
-                    return copy(path.join(ctx.opts.projectRoot, source + file), path.join(android_rootdir, destination), file);
-                });
+                return copy(path.join(ctx.opts.projectRoot, source + file), path.join(android_rootdir, destination), file);
             });
-        })
+        });
     });
 
     return promise;
