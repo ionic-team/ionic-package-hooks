@@ -20,8 +20,10 @@ Add :LSApplicationQueriesSchemes:6 string 'fbapi20140410'
 Add :LSApplicationQueriesSchemes:7 string 'fbapi20140116'
 Add :LSApplicationQueriesSchemes:8 string 'fbapi20150313'
 Add :LSApplicationQueriesSchemes:9 string 'fbapi20150629'
-Add :LSApplicationQueriesSchemes:10 string 'fbauth'
-Add :LSApplicationQueriesSchemes:11 string 'fbauth2'
+Add :LSApplicationQueriesSchemes:10 string 'fbapi20160328'
+Add :LSApplicationQueriesSchemes:11 string 'fbauth'
+Add :LSApplicationQueriesSchemes:12 string 'fbauth2'
+Add :LSApplicationQueriesSchemes:13 string 'fb-messenger-api20140430'
 EOF
 while read line
 do
