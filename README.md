@@ -79,6 +79,16 @@ recommended). If you want a hook to run before another one, reorder the `<hook
   allowing login and other features to occur natively rather than in safari.
 * **credit**: [@mablack](https://github.com/mablack)
 
+
+##### `ios9_allow_native_whatsapp.sh`
+
+* **author**: [@alongendler](https://github.com/alongendler)
+* **usage**: `<hook type="after_prepare" src="package-hooks/ios9_allow_native_whatsapp.sh" />`
+* **function**: Adds `LSApplicationQueriesSchemes` if needed and then adds the required 
+  key to communicate with whatsapp natively to the `.plist` file,
+  allowing to query the presence of WhatsApp on device using canOpenURL.
+* **credit**: [@mablack](https://github.com/mablack), [@carson-drake](https://github.com/carson-drake)
+
 ##### `ios_disable_bitcode.js`
 
 * **author**: [@akofman](https://github.com/akofman)
