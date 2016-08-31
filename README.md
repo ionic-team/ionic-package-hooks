@@ -56,18 +56,22 @@ recommended). If you want a hook to run before another one, reorder the `<hook
 * **function**: Adds the various platform CSS classes to the `<body>` tag of
   your app such as `platform-android`, `platform-ios`, etc.
 
+##### `android_custom_resources.js`
+
+* **author**: [@schmoofer](https://github.com/schmoofer)/[@dwieeb](https://github.com/dwieeb)
+* **usage**: `<hook type="after_prepare" src="package-hooks/android_custom_resources.js" />`
+* **function**: Copies assets in `resources/android/custom/` to all drawable-*
+  directories in `platforms/android/res`. Asset filenames must only use a-z,
+  0-9, and underscores. Example application: Allows for custom icons to be used
+  in Android notifications (action buttons and the notification icon) when
+  using the Push plugin.
+
 ##### `android_ignore_translation_errors.js`
 
 * **author**: [@carson-drake](https://github.com/carson-drake)
 * **usage**: `<hook type="after_prepare" src="package-hooks/android_ignore_translation_errors.js" />`
 * **function**: After Android prepare, add ` build-extras.gradle` to android platform root to
   allow android-lint to ignore the translation errors introduced when including `phonegap-plugin-barcodescanner`.
-
-##### `copy_android_resources.js`
-
-* **author**: [@schmoofer](https://github.com/schmoofer)
-* **usage**: `<hook type="after_prepare" src="package-hooks/copy_android_resources.js" />`
-* **function**: Copies assets in `resources/android/custom/` to all drawable-* directories in `platforms/android/res`. Asset filenames must only use a-z, 0-9, and underscores. Example application: Allows for custom icons to be used in Android notifications (action buttons and the notification icon) when using the Push plugin.
 
 ##### `ios9_allow_http.sh`
 
