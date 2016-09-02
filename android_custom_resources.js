@@ -9,7 +9,8 @@ var resourceDirs = [
   'res/drawable-hdpi',
   'res/drawable-xhdpi',
   'res/drawable-xxhdpi',
-  'res/drawable-xxxhdpi'
+  'res/drawable-xxxhdpi',
+  'res/values'
 ];
 
 module.exports = function(ctx) {
