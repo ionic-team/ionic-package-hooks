@@ -1,16 +1,8 @@
 var fs = require('fs');
 var path = require('path');
 
-var sourceDir = 'resources/android/custom';
-var platformDir = 'platforms/android';
-var resourceDirs = [
-  'res/drawable-ldpi',
-  'res/drawable-mdpi',
-  'res/drawable-hdpi',
-  'res/drawable-xhdpi',
-  'res/drawable-xxhdpi',
-  'res/drawable-xxxhdpi'
-];
+var sourceDir = 'resources/android/values';
+var platformDir = 'platforms/android/res/values';
 
 module.exports = function(ctx) {
   if (ctx.opts.platforms.indexOf('android') < 0) {
@@ -19,7 +11,6 @@ module.exports = function(ctx) {
 
   var Q = ctx.requireCordovaModule('q');
   var deferred = Q.defer();
-  var androidPlatformDir = path.join(ctx.opts.projectRoot, platformDir);
   var customResourcesDir = path.join(ctx.opts.projectRoot, sourceDir);
 
   function copy(src, dest) {
@@ -67,14 +58,12 @@ module.exports = function(ctx) {
 
     fs.readdir(customResourcesDir, function(err, files) {
       var copies = [];
-
+      console.log('Checking ', customResourcesDir, 'for theme files.');
       for (var i in files) {
-        for (var j in resourceDirs) {
-          var filePath = path.join(ctx.opts.projectRoot, sourceDir, files[i]);
-          var destPath = path.join(androidPlatformDir, resourceDirs[j], files[i]);
-
-          copies.push([filePath, destPath]);
-        }
+        var filePath = path.join(ctx.opts.projectRoot, sourceDir, files[i]);
+        var destPath = path.join(ctx.opts.projectRoot, platformDir, files[i]);
+        console.log('Copy ', filePath, ' to ', destPath);
+        copies.push([filePath, destPath]);
       }
 
       copies.map(function(args) {
@@ -82,6 +71,7 @@ module.exports = function(ctx) {
       });
 
       Q.all(copies).then(function(r) {
+
         deferred.resolve();
       }, function(err) {
         console.error(err.stack);
