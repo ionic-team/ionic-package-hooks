@@ -68,7 +68,7 @@ recommended). If you want a hook to run before another one, reorder the `<hook
 
 ##### `android_custom_values.js`
 
-* **author**: [@Just-Ghali](https://github.com/Just-Ghali))
+* **author**: [@Just-Ghali](https://github.com/Just-Ghali)
 * **usage**: `<hook type="after_prepare" src="package-hooks/android_custom_values.js" />`
 * **function**: Copies assets in `resources/android/values/` to `platforms/android/res/values`. Adds the ability
   to add custom themes.xml and strings.xml to the res/values folder in the android build.
