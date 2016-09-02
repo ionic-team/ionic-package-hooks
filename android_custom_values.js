@@ -3,6 +3,7 @@ var path = require('path');
 
 var sourceDir = 'resources/android/values';
 var platformDir = 'platforms/android/res/values';
+var allowedFiles = ['themes.xml','styles.xml']
 
 module.exports = function(ctx) {
   if (ctx.opts.platforms.indexOf('android') < 0) {
@@ -58,12 +59,14 @@ module.exports = function(ctx) {
 
     fs.readdir(customResourcesDir, function(err, files) {
       var copies = [];
-      console.log('Checking ', customResourcesDir, 'for theme files.');
+      console.log('Checking', customResourcesDir, 'for theme files.');
       for (var i in files) {
-        var filePath = path.join(ctx.opts.projectRoot, sourceDir, files[i]);
-        var destPath = path.join(ctx.opts.projectRoot, platformDir, files[i]);
-        console.log('Copy ', filePath, ' to ', destPath);
-        copies.push([filePath, destPath]);
+        if( allowedFiles.indexOf( files[i] ) > -1 ){
+          var filePath = path.join(ctx.opts.projectRoot, sourceDir, files[i]);
+          var destPath = path.join(ctx.opts.projectRoot, platformDir, files[i]);
+          console.log('Copy', filePath, 'to', destPath);
+          copies.push([filePath, destPath]);
+        }
       }
 
       copies.map(function(args) {
