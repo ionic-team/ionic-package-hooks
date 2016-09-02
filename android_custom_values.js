@@ -59,12 +59,10 @@ module.exports = function(ctx) {
 
     fs.readdir(customResourcesDir, function(err, files) {
       var copies = [];
-      console.log('Checking', customResourcesDir, 'for theme files.');
       for (var i in files) {
         if( allowedFiles.indexOf( files[i] ) > -1 ){
           var filePath = path.join(ctx.opts.projectRoot, sourceDir, files[i]);
           var destPath = path.join(ctx.opts.projectRoot, platformDir, files[i]);
-          console.log('Copy', filePath, 'to', destPath);
           copies.push([filePath, destPath]);
         }
       }
