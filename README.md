@@ -124,7 +124,7 @@ recommended). If you want a hook to run before another one, reorder the `<hook
 ##### `iosrtc-swift-support.js`
 
 * **author**: [@saghul](https://github.com/saghul), [@ibc](https://github.com/ibc)
-* **usage**: `<hook type="after_prepare" src="package-hooks/iosrtc-swift-support.js" />`
+* **usage**: `<hook type="after_platform_add" src="package-hooks/iosrtc-swift-support.js" />`
 * **function**: Fixes generated xcode files to support Swift compilation needed by the 
   [iOS WebRTC plugin](https://github.com/eface2face/cordova-plugin-iosrtc).
 
