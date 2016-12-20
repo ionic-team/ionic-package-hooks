@@ -121,6 +121,12 @@ recommended). If you want a hook to run before another one, reorder the `<hook
 * **function**: Remove the `armv7s` architecture from the build process, which
   causes various build errors, especially with `cordova-plugin-facebook4`.
 
+##### `iosrtc-swift-support.js`
+
+* **author**: [@saghul](https://github.com/saghul), [@ibc](https://github.com/ibc)
+* **usage**: `<hook type="after_prepare" src="package-hooks/iosrtc-swift-support.js" />`
+* **function**: Fixes generated xcode files to support Swift compilation needed by the 
+  [iOS WebRTC plugin](https://github.com/eface2face/cordova-plugin-iosrtc).
 
 ### Contributing
 
