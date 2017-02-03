@@ -81,6 +81,12 @@ recommended). If you want a hook to run before another one, reorder the `<hook
 * **function**: After Android prepare, add ` build-extras.gradle` to android platform root to
   allow android-lint to ignore the translation errors introduced when including `phonegap-plugin-barcodescanner`.
 
+##### `copy_google_services_config_files.js`
+
+* **author**: [@rolandjitsu](https://github.com/rolandjitsu)
+* **usage**: `<hook type="after_prepare" src="package-hooks/copy_google_services_config_files.js" />`
+* **function**: Copy `google-services.json` and/or `GoogleService-Info.plist` from the root of the project to Android/iOS platform specific required destinations to enable usage of [cordova-plugin-firebase](https://github.com/arnesson/cordova-plugin-firebase) when the build is done in Ionic Cloud.
+
 ##### `ios9_allow_http.sh`
 
 * **author**: [@daruwanov](https://github.com/daruwanov)
