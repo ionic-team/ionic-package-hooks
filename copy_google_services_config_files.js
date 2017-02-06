@@ -29,7 +29,8 @@ if (directoryExists('platforms/android')) {
 function copyIosKey() {
     var paths = [
         'GoogleService-Info.plist',
-        'platforms/ios/www/GoogleService-Info.plist'
+        'platforms/ios/www/GoogleService-Info.plist',
+        'www/GoogleService-Info.plist'
     ];
 
     for (var i = 0; i < paths.length; i++) {
@@ -49,7 +50,8 @@ function copyIosKey() {
 function copyAndroidKey() {
     var paths = [
         'google-services.json',
-        'platforms/android/assets/www/google-services.json'
+        'platforms/android/assets/www/google-services.json',
+        'www/google-services.json'
     ];
 
     for (var i = 0; i < paths.length; i++) {
