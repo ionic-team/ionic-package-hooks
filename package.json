@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/driftyco/ionic-package-hooks#readme",
   "dependencies": {
+    "plist-generator": "0.0.1",
     "xcode": "^0.8.2"
   }
 }
