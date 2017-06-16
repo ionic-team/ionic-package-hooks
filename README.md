@@ -133,6 +133,18 @@ recommended). If you want a hook to run before another one, reorder the `<hook
 * **usage**: `<hook type="after_platform_add" src="package-hooks/iosrtc-swift-support.js" />`
 * **function**: Adds `swift` support by adding universal objective c bridge to project.
 
+##### `twilio.js`
+
+* **author**: David Hasenjaeger at Wirestorm Innovations.
+* **usage**: `<hook type="after_platform_add" src="package-hooks/twilio.js" />`
+* **function**: Adds TwilioVoiceClient.framework file reference to "Frameworks" and "Embed Frameworks".
+
+##### `twilio.sh`
+
+* **author**: David Hasenjaeger at Wirestorm Innovations.
+* **usage**: `<hook type="after_platform_add" src="package-hooks/twilio.sh" />`
+* **function**: Downloads TwilioVoiceClient.framework file to platforms/ios/.  Necessary for running the twilio-voice-phonegap-plugin.
+
 
 
 ### Contributing
