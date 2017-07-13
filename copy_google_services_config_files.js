@@ -10,41 +10,38 @@ var fse = require('fs-extra');
 var config = fse.readFileSync('config.xml').toString();
 var name = getValue(config, 'name');
 
+var IOS_DIR = 'platforms/ios';
+var ANDROID_DIR = 'platforms/android';
+
 var PLATFORM = {
     IOS: {
         dest: [
-            'platforms/ios/' + name + '/Resources/GoogleService-Info.plist',
-            'platforms/ios/' + name + '/Resources/Resources/GoogleService-Info.plist'
+            IOS_DIR + name + '/Resources/GoogleService-Info.plist',
+            IOS_DIR + name + '/Resources/Resources/GoogleService-Info.plist'
         ],
         src: [
             'GoogleService-Info.plist',
-            'platforms/ios/www/GoogleService-Info.plist',
+            IOS_DIR + '/www/GoogleService-Info.plist',
             'www/GoogleService-Info.plist'
         ]
     },
     ANDROID: {
-        dest: ['platforms/android/google-services.json'],
+        dest: [
+            ANDROID_DIR + '/google-services.json'
+        ],
         src: [
             'google-services.json',
-            'platforms/android/assets/www/google-services.json',
+            ANDROID_DIR + '/assets/www/google-services.json',
             'www/google-services.json'
         ],
-        stringsXml: 'platforms/android/res/values/strings.xml'
+        stringsXml: ANDROID_DIR + '/res/values/strings.xml'
     }
 };
 
 // Copy key files to their platform specific folders
-if (directoryExists('platforms/ios')) {
-    copyIosKey();
-} else if (directoryExists('platforms/android')) {
-    copyAndroidKey();
-}
-
-function copyIosKey() {
+if (directoryExists(IOS_DIR)) {
     copyKey(PLATFORM.IOS);
-}
-
-function copyAndroidKey() {
+} else if (directoryExists(ANDROID_DIR)) {
     copyKey(PLATFORM.ANDROID, updateStringsXml)
 }
 
@@ -108,8 +105,7 @@ function getValue(config, name) {
 
 function fileExists(path) {
     try {
-        return fse.statSync(path)
-            .isFile();
+        return fse.statSync(path).isFile();
     } catch (e) {
         return false;
     }
@@ -117,8 +113,7 @@ function fileExists(path) {
 
 function directoryExists(path) {
     try {
-        return fse.statSync(path)
-            .isDirectory();
+        return fse.statSync(path).isDirectory();
     } catch (e) {
         return false;
     }
