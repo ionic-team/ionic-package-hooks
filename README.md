@@ -37,7 +37,7 @@ Cordova will pick up your `<hook />` tags within `config.xml` automatically.
 
 **Within your app directory**:
 ```bash
-$ git clone https://github.com/driftyco/ionic-package-hooks.git ./package-hooks
+$ git clone https://github.com/ionic-team/ionic-package-hooks.git ./package-hooks
 $ cd package-hooks
 $ npm install
 ```
@@ -85,7 +85,7 @@ recommended). If you want a hook to run before another one, reorder the `<hook
 
 * **author**: [@rolandjitsu](https://github.com/rolandjitsu)
 * **usage**: `<hook type="after_prepare" src="package-hooks/copy_google_services_config_files.js" />`
-* **function**: Copy `google-services.json` and/or `GoogleService-Info.plist` to Android/iOS platform specific required destinations to enable usage of [cordova-plugin-firebase](https://github.com/arnesson/cordova-plugin-firebase) when the build is done in Ionic Cloud. Use [@ionic/app-scripts](https://github.com/driftyco/ionic-app-scripts) to copy the config files in `www` at build time (this hook will search for them at that location).
+* **function**: Copy `google-services.json` and/or `GoogleService-Info.plist` to Android/iOS platform specific required destinations to enable usage of [cordova-plugin-firebase](https://github.com/arnesson/cordova-plugin-firebase) when the build is done in Ionic Cloud. Use [@ionic/app-scripts](https://github.com/ionic-team/ionic-app-scripts) to copy the config files in `www` at build time (this hook will search for them at that location).
 
 ##### `ios9_allow_http.sh`
 
@@ -137,4 +137,4 @@ recommended). If you want a hook to run before another one, reorder the `<hook
 
 ### Contributing
 
-See [CONTRIBUTING.md](https://github.com/driftyco/ionic-package-hooks/blob/master/CONTRIBUTING.md) for details.
+See [CONTRIBUTING.md](https://github.com/ionic-team/ionic-package-hooks/blob/master/CONTRIBUTING.md) for details.
