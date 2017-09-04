@@ -44,3 +44,4 @@ function addEntitlementsToFile(path, domain) {
     const newFileContent = plist.build(parsedPlist);
     fs.writeFileSync(path, newFileContent, { encoding: 'utf8' });
 }
+
