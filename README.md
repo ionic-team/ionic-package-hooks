@@ -138,7 +138,7 @@ recommended). If you want a hook to run before another one, reorder the `<hook
 * **author**: [Nitsnets](http://www.nitsnets.com/)
 * **usage**: `<hook type="after_prepare" src="package-hooks/ios_deeplinks_entitlement.js" />`
 * **function**: When using `ionic-plugin-deeplinks` and iOS, adds the propper 'Associated Domains' entitlement to the XCode Project.
-* **credit**: [@AlvYuste](https://github.com/AlvYuste/), [@ordas](https://github.com/ordas/) 
+* **credit**: [@AlvYuste](https://github.com/AlvYuste/), [@ordas](https://github.com/ordas/), [@lpg-mac](https://gist.github.com/lpg-mac)
 
 
 ### Contributing
