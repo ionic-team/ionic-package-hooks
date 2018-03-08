@@ -1,3 +1,5 @@
+## NOTE: Ionic Cloud is evolving into Ionic Pro and these hooks are deprecated. See the [Migration Guide](http://ionicframework.com/docs/pro/migration/) for more info.
+
 # Ionic Package Hooks
 
 The hooks in this repository are hooks that you can run during the packaging of
